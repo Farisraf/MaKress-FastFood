@@ -1,0 +1,287 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+
+/* Variabel CSS */
+:root {
+  --header-height: 3rem;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+}
+
+
+/* Warna */
+:root {
+  --first-color: #FCEAD2;
+  --second-color: #A7180D;
+  --thrid-color: -;
+}
+
+
+/* Font Typography */
+:root {
+  --body-font: 'Inter', sans-serif;
+  --big-font-size: 6.50rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+}
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 10.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
+
+/* Margin */
+:root {
+  --mb-1: 1rem;
+  --mb-2: 2rem;
+  --mb-3: 3rem;
+  --mb-4: 4rem;
+  --mb-5: 5rem;
+}
+
+
+/* Z-Index */
+:root {
+  --z-fixed: 100;
+}
+
+/* Base */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--font-medium);
+}
+h1,h2,p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Class CSS */
+.section {
+  padding: 3rem 0;
+}
+.section-title{
+  position: relative;
+  font-size: var(--h2-font-size);
+  color: var(--second-color);
+  margin: var(--mb-2) 0;
+  text-align: center;
+  letter-spacing: 1.9px;
+}
+.section-title::after{
+  position: absolute;
+  content: "";
+  width: 120px;
+  height: 0.18rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 2rem;
+  background-color: rgb(56, 25, 25);
+  margin-bottom: 2rem;
+}
+
+
+/* Layout */
+.bd-grid{
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-column-gap: 2rem;
+    width: calc(100% - 2rem);
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+}
+.l-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--first-color);
+}
+
+
+/* Navbar */
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .nav__menu{
+        position: fixed;
+        top: var(--header-height);
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        padding: 2rem;
+        background-color: #E7C290;
+        transition: 0.5s;
+    }
+}
+.nav__item{
+  margin-bottom: var(--mb-2);
+}
+.nav__link{
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  color: rgb(0, 0, 0);
+}
+.nav__link:hover {
+  color: black;
+}
+.nav__logo img {
+  width: 120px;
+}
+.nav__title-color {
+  color: black;
+}
+.nav__toggle{
+  font-size: 1.6rem;
+}
+  
+/* Show Menu */
+.show {
+  right: 0;
+}
+
+
+/* Back To Homepage Button */
+.arrow__homepage{
+  text-align: start;
+  font-size: 23px;
+  color: var(--second-color);
+  margin-top: 3.5rem;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+}
+.text__homepage{
+  margin-left: 1.5rem;
+  margin-top: -1.20rem;
+  font-size: 16px;
+  font-family: var(--body-font);
+  color: var(--second-color);
+}
+
+
+/* Banner Kategori & Menu */
+.container__chickenmenu {
+  padding: 15px 9%;
+  padding-bottom: 60px;
+}
+.container__chickenmenu .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 100px;
+}
+.container__chickenmenu .box-container .box {
+  border-radius: 15px;
+  background: var(--first-color);
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+.container__chickenmenu .box-container .box2 {
+  border-radius: 15px;
+  background: #FFAA2D;
+  text-align: center;
+  padding: 30px 20px;
+  margin-bottom: -5rem;
+}
+.container__chickenmenu .box-container .box2 img{
+  margin-left: auto;
+  margin-right: auto;
+  height: 220px;
+}
+.container__chickenmenu .box-container .box img{
+  margin-left: auto;
+  margin-right: auto;
+  height: 220px;
+}
+.container__chickenmenu .box-container .box:hover {
+  background-color: #FFAC31;
+  box-shadow: 0 10px 15px rgba(40, 16, 16, 0.9);
+  transform: scale(1.05);
+}
+.title__card{
+  margin-top: 0.5rem;
+  text-align: center;
+  color: black;
+}
+.title__card2{
+  font-weight: 400;
+  text-align: center;
+  color: black;
+  margin-top: 1rem;
+}
+.title__harga{
+  margin-top: 1rem;
+  text-align: center;
+  color: black;
+}
+
+
+
+/* Footer */
+.footer{
+  background-color: var(--first-color);
+}
+.footer__container{
+  row-gap: 2rem ;
+}
+.brand__footer{
+  letter-spacing: 1.5px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  margin: var(--mb-1);
+}
+.footer__text{
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+.collaboration{
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+.nama__footer{
+  margin-top: 0.99rem;
+  text-align: center;
+  font-size: 0.99rem;
+}
+.nama__footer a{
+  color: black;
+}
